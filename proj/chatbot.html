@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ChatGPT Chatbot</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="chat-container">
+        <div id="chat-box">
+            <div id="chat-gpt"></div>
+        </div>
+        <input type="text" id="user-input" placeholder="Type your message...">
+        <button id="send-button">Send</button>
+    </div>
+
+    <script>
+        const API_KEY = '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'; // Replace with your GPT-3 API key
+        const chatGpt = document.getElementById("chat-gpt");
+        const userInput = document.getElementById("user-input");
+        const sendButton = document.getElementById("send-button");
+
+        sendButton.addEventListener("click", sendMessage);
+
+        function sendMessage() {
+            const userMessage = userInput.value;
+            appendMessage("You: " + userMessage);
+
+            // Make a POST request to GPT-3 API to get a response
+            $.post({
+                url: 'https://api.openai.com/v1/engines/davinci-codex/completions',
+                headers: {
+                    'Authorization': `Bearer ${API_KEY}`,
+                    'Content-Type': 'application/json'
+                },
+                data: JSON.stringify({
+                    prompt: userMessage,
+                    max_tokens: 50 // You can adjust the response length as needed
+                }),
+                success: function (response) {
+                    const gptResponse = response.choices[0].text;
+                    appendMessage("ChatGPT: " + gptResponse);
+                },
+                error: function (error) {
+                    console.error("Error:", error);
+                }
+            });
+
+            // Clear the input field
+            userInput.value = "";
+        }
+
+        function appendMessage(message) {
+            const messageDiv = document.createElement("div");
+            messageDiv.textContent = message;
+            chatGpt.appendChild(messageDiv);
+        }
+    </script>
+</body>
+</html>
