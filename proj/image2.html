@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>LEARN EASY</title>
     <style>
-        /* CSS styles for your GUI elements */
+        /* CSS styles for your GpUI elements */
         body {
             margin: 0;
             padding: 0;
@@ -64,46 +64,71 @@
         .animated-element {
             animation: slide-in 1s ease;
         }
-
-        .img-1 {
-            border-radius: 35px;
-            height: 100px;
-            width: 100px;
-            position:relative;
-            right: -20px;
-            top: 25px;
-        }
-
-        .img-2 {
+        
+        .img-1{
+            margin-left:10px;
+            margin-top: 10px;
+            }
+        .img-1 img{
             border-radius: 35px;
             height: 100px;
             width: 100px;
             position: relative;
-            left: 150px;
-            top : -117px;
+            
+           
+           
+        }
+
+        .img-2{
+            margin-left:108px;
+            margin-top:-174px;
+            }
+        .img-2 img{
+            border-radius: 35px;
+            height: 100px;
+            width: 100px;
+            position: relative;
+            
+            
+            
+        }
+       
+        .img-3{
+            margin-left:245px;
+            margin-top:-190px;
+            }
+        .img-3 img{
+            border-radius: 35px;
+            height: 100px;
+            width: 100px;
+            position: relative;
+            
+            
+            
             
         }
 
-        .img-3 {
-            border-radius: 35px;
-            height: 100px;
-            width: 100px;
-            position: relative;
-            left: 280px;
-            top : -255px;
-        }
-       .dropdown-menu{
-         display:none;
-         }
-       .dropdown-menu-1{
-         display:block;
-         margin-bottom:-70px;
-         }
-        .dropdown-menu-1 ul {
-        color:transprant;
-        }
+       
+           
+           
+           
+          
+          
+           
+            
         
-  
+
+        
+            
+            
+            
+           
+          
+            
+        
+
+        
+        
         
     </style>
 </head>
@@ -118,9 +143,6 @@
     <nav>
         <ul>
             <li><a href="./head.html">Home</a></li>
-            <li><a href="./about.html">about</a></li>
-            <li><a href="./help.html">help</a></li>
-            <li><a href="./contact.html">contact</a></li>
         </ul>
     </nav>
 
@@ -132,100 +154,62 @@
             <p>This is where your study elements and content will be placed.</p>
         </div>
     </main>
-    
-          
 
     <!-- Footer Section -->
     <footer>
 
         &copy; 
     </footer>
-    
-            
-             
-    
-   
-    
-            
-           
-            <center>
-                <button>
-            <a onclick="menuclick()">Select Regulation</a>
-            </button>
-            <div class="dropdown-menu" id="menu">
-            <ul>
-             <a href="./image1.html">   
-            <li><a href="./image1.html">R23</a></li>
-            </a>
-            <li><a href="./image2.html">R20</a></li>
-            
-            </ul>
-            </div>
-           </center>
-            
-            
-            
-    </select>
-    <script>
-       function menuclick(){
-       var element =document.getElementById("menu");
-       if(element.classList.contains("dropdown-menu")){
-       element.classList.remove("dropdown-menu");
-       element.classList.add("dropdown-menu-1");
-       }
-       else{
-       element.classList.remove("dropdown-menu-1");
-       element.classList.add("dropdown-menu");
-       }
-       }
-         
-    </script>
-    
-    <script src="js/jquery-2.2.0.min.js"></script>
-    
-    <script>
-    function get_val()
-    {
-    //:selected is used to select only selected text
-    var ddlval = $("#ddl :selected").text();
-    alert(ddlval);
-    }
-    </script>
-    
-    
-         
-         
-    
-       
-       
     <br>
-    <div style="right: 1000px;">
-        <a href="./chatbot.html">
-            <img src="./images/chatbot.jpg" class="img-1">
-            
-            
-            
+    
+    
+    <div class="img-1">
+        <a href="./main/main1.html">
+            <img src="./images/pdf.jpeg" >
+            <figcaption>
+             Material
+            </figcaption>
+          
         </text>
     </h3>
     </div>
     <br><br>
     
-    <div>
-        <a href="./calculator.html">
-            <img src="./images/casio.jpeg" class="img-2">
+    
+    <div class="img-2">
+    <figure>
+        <a href="./main/main2.html">
+            <img src="./images/syllabus.jpeg" >
+            <figcaption>
+              Syllabus
+            </figcaption>
         </a>
     </div>
+    </figure>
+  
     <br><br>
 
-    <div>
-        <a href="./update.html">
-            <img src="./images/update.jpeg" class="img-3">
+    <div class="img-3">
+    <figure>
+        <a href="./main/main3.html">
+            <img src="./images/exam.jpeg" >
+            <figcaption>
+             Practice papers
+            </figcaption>
         </a>
     </div>
     <br><br>
+    </figure>
     
-   
-      
+        
+
+    
+       
+
+    
+        
+
+    
 
 
 </body>
