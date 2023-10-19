@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>LEARN EASY</title>
+    <style>
+        /* CSS styles for your GUI elements */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Navigation Menu */
+        nav {
+            background-color: #3498bd;
+            color: #fff;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        /* Main Content Section */
+        main {
+            padding: 20px;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Animation CSS */
+        @keyframes slide-in {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .animated-element {
+            animation: slide-in 1s ease;
+        }
+
+        .img-1 {
+            border-radius: 35px;
+            height: 100px;
+            width: 100px;
+            position:relative;
+            right: -20px;
+            top: 25px;
+        }
+
+        .img-2 {
+            border-radius: 35px;
+            height: 100px;
+            width: 100px;
+            position: relative;
+            left: 150px;
+            top : -117px;
+            
+        }
+
+        .img-3 {
+            border-radius: 35px;
+            height: 100px;
+            width: 100px;
+            position: relative;
+            left: 280px;
+            top : -255px;
+        }
+       .dropdown-menu{
+         display:none;
+         }
+       .dropdown-menu-1{
+         display:block;
+         margin-bottom:-70px;
+         }
+        .dropdown-menu-1 ul {
+        color:transprant;
+        }
+        
+  
+        
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Learn Easy</h1>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">help</a></li>
+            <li><a href="#">contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Section -->
+    <main>
+        <div class="animated-element">
+            <!-- Your GUI elements go here -->
+            <h2>Welcome to Engineering Drives</h2>
+            <p>This is where your study elements and content will be placed.</p>
+        </div>
+    </main>
+    
+          
+
+    <!-- Footer Section -->
+    <footer>
+
+        &copy; 
+    </footer>
+           
+            <center>
+                <button>
+            <a onclick="menuclick()">Select Regulation</a>
+            </button>
+            <div class="dropdown-menu" id="menu">
+            <ul>
+           <li> <a href="./r23/head.html">R23</a></li>
+           <li> <a href="./r20/head.html">R20</a></li>
+            </ul>
+            </ul>
+            </div>
+           </center>
+            
+            
+            
+    </select>
+    <script>
+       function menuclick(){
+       var element =document.getElementById("menu");
+       if(element.classList.contains("dropdown-menu")){
+       element.classList.remove("dropdown-menu");
+       element.classList.add("dropdown-menu-1");
+       }
+       else{
+       element.classList.remove("dropdown-menu-1");
+       element.classList.add("dropdown-menu");
+       }
+       }
+         
+    </script>
+    
+    <script src="js/jquery-2.2.0.min.js"></script>
+    
+    <script>
+    function get_val()
+    {
+    //:selected is used to select only selected text
+    var ddlval = $("#ddl :selected").text();
+    alert(ddlval);
+    }
+    </script>
+    
+    
+         
+         
+    
+       
+       
+    <br>
+    <div style="right: 1000px;">
+        <a href="./chatbot.html">
+            <img src="./chatbot.jpg" class="img-1">
+            
+            
+            
+        </text>
+    </h3>
+    </div>
+    <br><br>
+    
+    <div>
+        <a href="./calculator.html">
+            <img src="./casio.jpeg" class="img-2">
+        </a>
+    </div>
+    <br><br>
+
+    <div>
+        <a href="./update.html">
+            <img src="./update.jpeg" class="img-3">
+        </a>
+    </div>
+    <br><br>
+    
+   
+      
+
+
+</body>
+
+</html>
